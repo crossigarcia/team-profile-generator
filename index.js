@@ -63,7 +63,69 @@ function addTeamMembers() {
 };
 
 //addEngineer
+function addEngineer() {
+   inquirer.prompt([
+      {
+         type: 'input',
+         name: 'engineerName',
+         message: "What is the engineer's name?"
+      },
+      {
+         type: 'input',
+         name: 'engineerId',
+         message: 'What is their id?'
+      },
+      {
+         type: 'input',
+         name: 'engineerEmail',
+         message: 'What is their email?'
+      },
+      {
+         type: 'input',
+         name: 'engineerGithub',
+         message: 'What is their Github username?'
+      }
+
+   ])
+   .then(res => {
+      const engineer = new Engineer(res.engineerName, res.engineerId, res.engineerEmail, res.engineerGithub);
+      teamArr.push(engineer);
+
+      addTeamMembers();
+   });
+};
 
 //addIntern
+function addIntern() {
+   inquirer.prompt([
+      {
+         type: 'input',
+         name: 'internName',
+         message: "What is the intern's name?"
+      },
+      {
+         type: 'input',
+         name: 'internId',
+         message: 'What is their id?'
+      },
+      {
+         type: 'input',
+         name: 'internEmail',
+         message: 'What is their email?'
+      },
+      {
+         type: 'input',
+         name: 'internSchool',
+         message: 'What school do they go to?'
+      }
 
-//finish
+   ])
+   .then(res => {
+      const intern = new Intern(res.internName, res.internId, res.internEmail, res.internSchool);
+      teamArr.push(intern);
+
+      addTeamMembers();
+   });
+};
+
+//buildTeam
