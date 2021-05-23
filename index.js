@@ -8,12 +8,18 @@ const Manager = require('./lib/Manager');
 
 const teamArr = [];
 // Add manager function
-function addManager() {
-   inquirer.prompt([
+const addManager = () => {
+   console.log(`
+   ======================
+      Build Your Team:
+   ======================
+   `);
+
+   return inquirer.prompt([
       {
          type: 'input',
          name: 'managerName',
-         message: 'What is the manager name?'
+         message: "What is the manager's name?"
       },
       {
          type: 'input',
@@ -41,7 +47,7 @@ function addManager() {
 };
 
 //prompt 
-function addTeamMembers() {
+const addTeamMembers = () => {
    inquirer.prompt([
       {
          type: 'list',
@@ -63,7 +69,7 @@ function addTeamMembers() {
 };
 
 //addEngineer
-function addEngineer() {
+const addEngineer = () => {
    inquirer.prompt([
       {
          type: 'input',
@@ -96,7 +102,7 @@ function addEngineer() {
 };
 
 //addIntern
-function addIntern() {
+const addIntern = () => {
    inquirer.prompt([
       {
          type: 'input',
@@ -129,3 +135,8 @@ function addIntern() {
 };
 
 //buildTeam
+// const buildTeam = () => {
+//    fs.writeFile('./dist/team.html', )
+// }
+
+addManager();
