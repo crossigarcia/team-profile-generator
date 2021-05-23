@@ -7,14 +7,14 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
 const teamArr = [];
-// Add manager function
-const addManager = () => {
+
+const promptStart = () => {
    console.log(`
    ======================
       Build Your Team:
    ======================
    `);
-
+   //add manager
    return inquirer.prompt([
       {
          type: 'input',
@@ -135,8 +135,14 @@ const addIntern = () => {
 };
 
 //buildTeam
-// const buildTeam = () => {
-//    fs.writeFile('./dist/team.html', )
-// }
+const buildTeam = () => {
+   console.log(teamArr);
+//    // fs.writeFile('./dist/index.html', pageHTML, err => {
+//    //    if(err) {
+//    //       console.error(err);
+//    //       return
+//    //    };
+//    });
+};
 
-addManager();
+promptStart();
