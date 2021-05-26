@@ -5,6 +5,8 @@ const inquirer = require('inquirer');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const generatePage = require('./src/page-template');
+const writeFile = require('./utils/generate-site');
 
 const teamArr = [];
 
@@ -137,12 +139,7 @@ const addIntern = () => {
 //buildTeam
 const buildTeam = () => {
    console.log(teamArr);
-//    // fs.writeFile('./dist/index.html', pageHTML, err => {
-//    //    if(err) {
-//    //       console.error(err);
-//    //       return
-//    //    };
-//    });
+   writeFile(generatePage(teamArr));
 };
 
 promptStart();
