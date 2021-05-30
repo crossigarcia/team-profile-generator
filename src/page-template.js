@@ -21,7 +21,7 @@ function generatePage(team) {
             </div>
          </header>
          <main class="container">
-               <div id="team-cards" class="row">
+               <div id="team-cards" class="row d-flex flex-row-reverse">
                      ${teamCards(team)}
                </div>
          </main>
@@ -75,7 +75,7 @@ function engineerCard(engineer) {
                      <div class="card-body text-dark">
                         <p class="card-text">ID: ${engineer.getId()}</p>
                         <p class="card-text">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-                        <p class="card-text">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></p>
+                        <p class="card-text">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></p>
                      </div>
                   </div>
                </div>
