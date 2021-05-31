@@ -21,7 +21,7 @@ function generatePage(team) {
             </div>
          </header>
          <main class="container">
-               <div id="team-cards" class="row d-flex flex-row-reverse">
+               <div id="team-cards" class="row">
                      ${teamCards(team)}
                </div>
          </main>
