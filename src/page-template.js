@@ -14,7 +14,7 @@ function generatePage(team) {
       </head>
       <body>
          <header>
-            <div class="jumbotron jumbotron-fluid>
+            <div class="jumbotron jumbotron-fluid">
                <div class="container">
                   <h1>My Team</h1>
                </div>
